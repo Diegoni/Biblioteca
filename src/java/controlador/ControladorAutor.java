@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
+
 import modelo.Autor;
 
 public class ControladorAutor extends ControladorBase {
@@ -38,15 +39,15 @@ public class ControladorAutor extends ControladorBase {
 
     @Override
     public String consulta(String[] parametros) {
-        if(parametros[1].equals("Buscar")){
+        if (parametros[1].equals("Buscar")) {
             return obtenerLibro(parametros[2]);
         }
-        if(parametros[1].equals("Update")){
+        if (parametros[1].equals("Update")) {
             actualizarAutor(parametros);
         }
         return "";
     }
-    
+
     public void actualizarAutor(String[] parametros) {
         modelo = new Autor();
         byte[] bytes = parametros[2].getBytes(StandardCharsets.ISO_8859_1);
@@ -60,19 +61,19 @@ public class ControladorAutor extends ControladorBase {
         modelo.update(parametros[4]);
         setNumeroDeError(0);
     }
-    
-        private String obtenerLibro(String id){
+
+    private String obtenerLibro(String id) {
         modelo = new Autor();
         ArrayList libro = modelo.selectUno(id);
         String respuesta = "{"
-                + "\"Nombre\" : \""+ libro.get(0) + "\", "
-                + "\"Apellido\" : \""+libro.get(1)+"\""
+                + "\"Nombre\" : \"" + libro.get(0) + "\", "
+                + "\"Apellido\" : \"" + libro.get(1) + "\""
                 + "}";
         System.out.println(respuesta);
         return respuesta;
-        
+
     }
-    
+
     @Override
     public void actualizar(String[] parametros) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -82,7 +83,7 @@ public class ControladorAutor extends ControladorBase {
     public void eliminar(int id) {
         modelo = new Autor();
         int respuesta = modelo.delete(id);
-        if(respuesta != 0){
+        if (respuesta != 0) {
             setNumeroDeError(0);
         } else {
             setNumeroDeError(6);
