@@ -1,0 +1,111 @@
+/*!
+ * Start Bootstrap - Logo Nav (https://startbootstrap.com/template-overviews/logo-nav)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logo-nav/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+  background-image: url('../img/textura.jpg');
+}
+
+.dropdown-menu li a{
+  color: black;
+  margin-left: 10px;
+}
+.dropdown button{
+  background-color: #343a40;
+  color: #FFFFFF;
+}
+.nav-item button{
+  background-color: #343a40;
+  color: #FFFFFF;
+}
+.nav-item button a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.relleno{
+  user-select: none;
+  color: #ffffff;
+}
+.btn{
+  width: 120px;
+}
+
+/*#fondo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#alert{
+    width: 50%;
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40%;
+}*/
+
+#form{
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    -webkit-box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.32);
+    box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.32);
+}
+
+.scrolleable{
+    overflow-y: scroll;
+    height: 300px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+#img-login{
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+}
+
+#modificada{
+    width: 70%;
+}
+
+.alert_position{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 300px;
+}
+.alert_position strong{
+    font-size: 18px;
+}
+
+/*SELECT * FROM 
+(
+SELECT
+`prestamo`.`idPrestamo`,
+`prestamo`.`Estado_idEstado`,
+`libro`.`Titulo`,
+`socio`.`Apellido`,
+`prestamo`.`Fecha`
+FROM `prestamo`
+RIGHT JOIN `libro`
+ON `prestamo`.`Libro_idlibro` = `libro`.`idlibro`
+LEFT JOIN `socio`
+ON `prestamo`.`Socio_idSocio` = `socio`.`idSocio`
+ORDER BY `prestamo`.`idPrestamo` DESC, `prestamo`.`Estado_idEstado` ASC
+) AS x GROUP BY `Titulo`;*/
+
+
