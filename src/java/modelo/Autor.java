@@ -125,7 +125,7 @@ public class Autor implements IModelo {
      */
     public ArrayList selectUno(String id) {
         String select = "SELECT Nombre, Apellido FROM `autor` WHERE idAutor = "+id+";";
-        ArrayList existencia = CONECTOR.ejecutarConsulta(select);
+        ArrayList existenciaA = CONECTOR.ejecutarConsulta(select);
         return (ArrayList) existencia.get(0); 
     }
 }
